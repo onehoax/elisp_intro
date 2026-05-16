@@ -1,0 +1,27 @@
+WASHINGTON, George 
+ADAMS, John 
+JEFFERSON, Thomas 4.4.1 The ‘append-to-buffer’ Interactive Expression
+---------------------------------------------------
+
+Since the ‘append-to-buffer’ function will be used interactively, the
+function must have an ‘interactive’ expression.  (For a review of
+‘interactive’, see *note Making a Function Interactive: Interactive.)
+
+   The expression reads as follows:
+
+     (interactive
+      (list (read-buffer
+             "Append to buffer: "
+             (other-buffer (current-buffer) t))
+            (region-beginning)
+            (region-end)))
+
+MADISON, James 
+MONROE, James
+
+(buffer-name)
+(buffer-file-name)
+(buffer-size)
+(point)
+(point-min)
+(point-maxxxxx)
