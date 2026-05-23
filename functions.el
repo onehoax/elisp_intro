@@ -152,3 +152,25 @@ colors
 (car (nthcdr 1 colors))
 (car (nthcdr 2 colors))
 
+
+; Write a function to search for a regular expression that matches
+; two or more blank lines in sequence.
+
+(defun search-blank-lines ()
+  "Search forward for 2 or more consecutive blank lines."
+  (interactive)
+  (re-search-forward "\n\\s-*\n+" nil t))
+
+(defun search-duplicated-word ()
+  "Search forward for consecutive duplicated words."
+  (interactive)
+  (re-search-forward
+   "\\b\\([[:alpha:]]+\\)\\b[[:space:]\n]+\\1\\b"
+   nil
+   t))
+
+the
+the
+
+from from
+
